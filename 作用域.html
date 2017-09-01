@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //变量遮蔽：子函数的局部变量和全局变量如果重名,不会覆盖,只会遮蔽,会就近选择;
+    var a = 12;
+    function show(){
+        var a = 5;
+        alert(a);
+    }
+    alert(a);
+    show();
+</script>
+
+</body>
+</html>

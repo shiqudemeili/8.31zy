@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+
+</head>
+
+<body>
+<input type="button" value="全选"/>
+<input type="button" value="不选"/>
+<input type="button" value="反选"/>
+<hr/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+
+
+<script>
+
+
+    function btn(index, boolean) {
+        var oBtn = document.getElementsByTagName("input")[index];
+        var checkboxs = document.getElementsByTagName("input")
+        oBtn.onclick = function () {
+            for (var i = 3; i < checkboxs.length; i++) {
+                checkboxs[i].checked = boolean;
+
+            }
+        }
+    }
+
+    btn(0, true);
+    btn(1, false);
+    var oBtn3 = document.getElementsByTagName("input")[2];
+    var checkboxs = document.getElementsByTagName("input");
+    oBtn3.onclick = function () {
+        for (var i = 3; i < checkboxs.length; i++) {
+            if (checkboxs[i].checked == true) {
+                checkboxs[i].checked = false
+            } else {
+                checkboxs[i].checked = true;
+            }
+
+        }
+    }
+//      牛逼
+
+</script>
+</body>
+</html>

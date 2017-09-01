@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li,span,p,a,i{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        #products{
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+        }
+        #products ul {
+            width: 400px;
+            height: 200px;
+            padding-top: 20px;
+            margin-left: 20px;
+        }
+        #products ul li{
+            width: 600px;
+            height: 50px;
+            overflow: hidden;
+        }
+        #products ul li span{
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #products ul li p{
+            float: left;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin: 1px 5px;
+            border: 1px solid purple;
+            cursor: pointer;
+        }
+        .products_prices{
+            width: 600px;
+            height: 200px;
+            margin-top: 30px;
+            border-top: 1px solid purple;
+        }
+        .products_prices span{
+            display: block;
+            font-size: 16px;
+            margin-top: 20px;
+            text-indent: 2em;
+        }
+        .products_prices span p{
+            float: left;
+        }
+        .products_prices button{
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            margin-top: 60px;
+            margin-left: 480px;
+        }
+    </style>
+</head>
+<body>
+<div id="products">
+    <ul id="products_description">
+        <li>
+            <span>型号:</span>
+            <p>4.7英寸</p>
+            <p>5.5英寸</p>
+        </li>
+        <li>
+            <span>颜色:</span>
+            <p>银色</p>
+            <p>金色</p>
+            <p>深空灰色</p>
+        </li>
+        <li>
+            <span>内存:</span>
+            <p>16GB</p>
+            <p>64GB</p>
+            <p>128GB</p>
+        </li>
+        <li>
+            <span>版本:</span>
+            <p>公开版</p>
+            <p>移动赠费版</p>
+            <p>联通合约版</p>
+        </li>
+    </ul>
+    <div class="products_prices">
+        <span>
+            <p>价格:</p>
+            <b></b>
+            <a href="javascript:;">
+                <i>移动赠费版</i>或
+                <i>联通合约版</i>购机价格计算器请点击这里
+            </a>
+        </span>
+        <button>立即购买</button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var aLis=document.getElementById("products_description").getElementsByTagName("li");
+        function fn(alis) {
+            var aPs=alis.getElementsByTagName("p");
+            for(var i=0;i<aPs.length;i++){
+                aPs[i].onclick=function () {
+                    for(var j=0;j<aPs.length;j++){
+                        aPs[j].style.background="";
+                    }
+                    this.style.background="red";
+                    var index = this.index();
+                    switch (aPs[i]){
+                        case aPs[0]:  alert(800);
+                        break;
+                        case aPs[1]:  alert(1600);
+                        break;
+                        case aPs[2]:  alert(3200);
+                }
+                }
+            }
+        }
+        fn(aLis[0]);
+        fn(aLis[1]);
+        fn(aLis[2]);
+        fn(aLis[3]);
+</script>

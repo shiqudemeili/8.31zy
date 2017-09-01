@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style>
+        .a {
+            background: green;
+        }
+
+        .b {
+            background: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    var lis = document.getElementsByTagName("li")
+    for (var i = 0; i < lis.length; i++) {
+        if (i % 2 == 0) {
+            lis[i].className = "a"
+
+        } else {
+            lis[i].className = "b"
+        }
+
+
+    }
+
+
+</script>
+</body>
+</html>

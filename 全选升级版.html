@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+
+</head>
+
+<body>
+<input type="checkbox" />
+<hr/>
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+
+
+<script>
+var oBtn=document.getElementsByTagName("input")[0];
+var aBtn=document.getElementsByTagName("input");
+oBtn.onclick=function () {
+    for(var i=1;i<aBtn.length;i++){
+        if(oBtn.checked==true){
+            aBtn[i].checked=true;
+        }else {
+            aBtn[i].checked=false;
+        }
+
+    }
+}
+
+//我真牛逼！
+
+
+
+</script>
+
+
+</body>
+</html>
